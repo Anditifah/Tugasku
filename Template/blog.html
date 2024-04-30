@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto; /* Centered container with more top margin */
+            padding: 20px;
+            border-radius: 10px; /* Rounded container */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+            background-color: #fff; /* White background */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #122233;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            background-color: #f0f0f0; /* Light gray background for each blog item */
+            padding: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        li:hover {
+            background-color: #e0e0e0; /* Darker gray background on hover */
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: inherit; /* Inherit text color from parent */
+        }
+
+        a h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 24px; /* Larger title font size */
+            margin-bottom: 10px; /* Reduced bottom margin */
+        }
+
+        a p {
+            color: #666;
+            margin-bottom: 0; /* Removed bottom margin */
+            line-height: 1.6; /* Increased line height for better readability */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Explore My Blog</h1>
+        <ul>
+            <li>
+                <a href="{% url 'blog_detail' blog.slug %}">
+                    <h2>Blog Saya</h2>
+                    <p>blog ini merupakan penjelasan mengenai pemula yang mengerjakan tugas web design</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
